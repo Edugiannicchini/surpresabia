@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contagem 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="center-page">
+
+  <h1 class="title">Nossa viagem está chegando 💖</h1>
+
+  <div class="big-timer" id="timer"></div>
+
+  <a class="back" href="home.html">⬅ Voltar</a>
+
+  <script>
+    var viagem = new Date("2026-07-09").getTime();
+
+    setInterval(function () {
+
+      var agora = new Date().getTime();
+      var distancia = viagem - agora;
+
+      var dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+
+      document.getElementById("timer").innerHTML =
+        "Faltam <b>" + dias + "</b> dias para viver isso com você 💘";
+
+    }, 1000);
+  </script>
+
+</body>
+</html>
